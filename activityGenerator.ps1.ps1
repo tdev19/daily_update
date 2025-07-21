@@ -24,4 +24,4 @@ for ($i = 0; $i -lt 30; $i++) {
 }
 
 # Push to GitHub
-git push origin main
+git push 
