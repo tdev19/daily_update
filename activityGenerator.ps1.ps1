@@ -3,8 +3,14 @@ git config user.name "tdev19"
 git config user.email "dvthuse07@gmail.com"
 
 # Loop for 30 days
-for ($i = 0; $i -lt 30; $i++) {
-    $daysAgo = (Get-Date).AddDays(-$i)
+for ($i = 300; $i -lt 600; $i++) {
+
+    # Generate a random number between 0 and 100
+    $randomNumber = Get-Random -Minimum 0 -Maximum 5
+    Write-Output $randomNumber
+    $n  = $i + $randomNumber
+    $daysAgo = (Get-Date).AddDays(-$n)
+    Write-Output $daysAgo
     $commitDate = $daysAgo.ToString("yyyy-MM-ddTHH:mm:ss")
 
     # Modify a dummy file
